@@ -1,14 +1,38 @@
-#app{
+#app {
   width: 768px;
-  height:1000px;
+  height: 1000px;
   border: 1px solid black;
   margin: 0 auto;
+  padding: 20px 50px;
 }
 
-.field{
+.personal-info {
+  margin: 20px 30px;
+  position: relative;
+}
+
+.add-field-btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.field {
   margin: 5px 5px;
-  
 }
 
+.value {
+  font-size: 16px;
+}
 
+.amm {
+  font-size: 22px;
+}
 
+.coupled {
+  margin: 20px 20px;
+}
+
+input {
+  border: none;
+}
