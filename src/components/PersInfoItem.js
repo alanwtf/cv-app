@@ -13,15 +13,14 @@ class PersInfoItem extends React.Component {
   render() {
     return (
       <div className="coupled">
-        <Input className="value" />
+        <Input className="value" val="Example" />
         <button
-          //style={{display:  ${this.state.display}}}
           className="delete-field-btn"
           onClick={() => this.props.del(this.props.field.id)}
         >
           X
         </button>
-        <Input className="amm" />
+        <Input className="amm" val="Example" />
       </div>
     );
   }

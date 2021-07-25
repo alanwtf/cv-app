@@ -24,8 +24,6 @@ class PersonalInfo extends React.Component {
   addField = (e) => {
     this.setState({
       fields: this.state.fields.concat({
-        title: 'newField',
-        value: 'ewField',
         id: this.state.ids,
       }),
       ids: this.state.ids + 1,
@@ -33,7 +31,6 @@ class PersonalInfo extends React.Component {
   };
 
   deleteField = (id) => {
-    console.log(id);
     const newArr = this.state.fields.filter((field) => field.id !== id);
     console.log(newArr);
     this.setState({

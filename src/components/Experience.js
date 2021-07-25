@@ -7,17 +7,9 @@ class Experience extends React.Component {
     this.state = {
       fields: [
         {
-          place: 'hello',
-          value: 'hi',
-          from: '12/5/18',
-          to: '13/5/18',
           id: 1,
         },
         {
-          place: 'hello',
-          value: 'hi',
-          from: '12/5/18',
-          to: '13/5/18',
           id: 2,
         },
       ],
@@ -25,21 +17,38 @@ class Experience extends React.Component {
     };
   }
 
+  addField = (e) => {
+    this.setState({
+      fields: this.state.fields.concat({
+        id: this.state.ids,
+      }),
+      ids: this.state.ids + 1,
+    });
+  };
+
+  deleteField = (id) => {
+    const newArr = this.state.fields.filter((field) => field.id !== id);
+    this.setState({
+      fields: newArr,
+    });
+  };
+
   render() {
     return (
       <div className="personal-info">
-        <h1>Work Experience</h1>
+        <h1>{this.props.title}</h1>
         {this.state.fields.map((field) => {
           return (
             <DatedField
               key={field.id}
-              place={field.place}
-              position={field.position}
-              from={field.from}
-              to={field.to}
+              delete={this.deleteField}
+              id={field.id}
             />
           );
         })}
+        <button className="add-field-btn" onClick={this.addField}>
+          Add Field
+        </button>
       </div>
     );
   }

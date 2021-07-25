@@ -5,7 +5,8 @@ function App() {
   return (
     <div id="app">
       <PersonalInfo />
-      <Experience />
+      <Experience title="Experience" />
+      <Experience title="Studies" />
     </div>
   );
 }

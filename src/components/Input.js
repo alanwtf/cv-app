@@ -6,7 +6,7 @@ class Input extends React.Component {
     super(props);
 
     this.state = {
-      value: 'hola',
+      value: this.props.val,
       editMode: false,
     };
   }

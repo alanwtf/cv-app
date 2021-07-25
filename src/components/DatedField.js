@@ -8,14 +8,18 @@ class DatedField extends React.Component {
   render() {
     return (
       <div className="dated-field coupled">
-        <h3>charge</h3>
-        <Input />
-        <h3>place</h3>
-        <Input />
-        <h3>from</h3>
-        <Input />
-        <h3>to</h3>
-        <Input />
+        <button
+          className="delete-field-btn"
+          onClick={() => this.props.delete(this.props.id)}
+        >
+          X
+        </button>
+        <Input val="Position" />
+        <Input val="Company" />
+        <div className="">from</div>
+        <Input val="dd/mm/aaaa" />
+        <div>to</div>
+        <Input val="dd/mm/aaaa" />
       </div>
     );
   }
